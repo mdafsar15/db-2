@@ -2,6 +2,7 @@ installtype=$1
 if [ "$installtype" = "mongo" ]
   then
     unzip -o /tmp/mongo.zip;
+    sudo chown -R oracle:oracle /var/lib/jenkins/workspace/param-pipe/*
     sudo chown -R oracle:oracle /tmp/*
     sh /tmp/getservers.sh;
     rm -f /tmp/getservers.sh;
