@@ -1,6 +1,7 @@
 installtype=$1
 if [ "$installtype" = "mongo" ]
   then
+    cd /tmp;
     unzip -o /tmp/mongo.zip;
     sh /tmp/getservers.sh;
     rm -f /tmp/getservers.sh;
